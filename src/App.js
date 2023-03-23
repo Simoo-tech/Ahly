@@ -24,16 +24,16 @@ function App() {
   window.addEventListener("scroll", Topbtn);
 
   return (
-    <Router>
+    <Router basename="/Ahly">
       <div className="App">
         <Top />
         <NavBar />
         <Routes>
-          <Route path="/Ahly" element={<Home />} />
-          <Route path="player">
-            <Route path=":url" element={<Player />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/player">
+            <Route path="/:url" element={<Player />} />
           </Route>
-          <Route path="videos" element={<Vidoes />} />
+          <Route path="/videos" element={<Vidoes />} />
         </Routes>
         <div className={top ? "totop active" : "totop"} onClick={ToTop}>
           <AiOutlineArrowUp />

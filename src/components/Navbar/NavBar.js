@@ -39,7 +39,7 @@ export default function NavBar() {
               </li>
 
               <li>
-                <Link to="videos">الفيديوهات</Link>
+                <Link to="/videos">الفيديوهات</Link>
               </li>
             </ul>
           </div>
