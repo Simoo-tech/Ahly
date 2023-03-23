@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Ahly/static/css/main.7629ec33.css",
-    "main.js": "/Ahly/static/js/main.095f6c68.js",
+    "main.js": "/Ahly/static/js/main.a1470f9f.js",
     "static/js/787.ae001955.chunk.js": "/Ahly/static/js/787.ae001955.chunk.js",
     "static/media/4.mp4": "/Ahly/static/media/4.ca1c3ed6f658dbc547f6.mp4",
     "static/media/3.mp4": "/Ahly/static/media/3.5c36ceeafeac72f108c4.mp4",
@@ -34,11 +34,11 @@
     "static/media/logo.png": "/Ahly/static/media/logo.9a483c0474896a258f2b.png",
     "index.html": "/Ahly/index.html",
     "main.7629ec33.css.map": "/Ahly/static/css/main.7629ec33.css.map",
-    "main.095f6c68.js.map": "/Ahly/static/js/main.095f6c68.js.map",
+    "main.a1470f9f.js.map": "/Ahly/static/js/main.a1470f9f.js.map",
     "787.ae001955.chunk.js.map": "/Ahly/static/js/787.ae001955.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7629ec33.css",
-    "static/js/main.095f6c68.js"
+    "static/js/main.a1470f9f.js"
   ]
 }
