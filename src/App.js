@@ -31,7 +31,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/player">
-            <Route path="/:url" element={<Player />} />
+            <Route path=":url" element={<Player />} />
           </Route>
           <Route path="/videos" element={<Vidoes />} />
         </Routes>
