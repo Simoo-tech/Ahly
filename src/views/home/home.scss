@@ -1,0 +1,244 @@
+@use "../../sass/MediaQuiry" as *;
+#home {
+  position: relative;
+  .pages {
+    position: fixed;
+    width: 100%;
+    padding-right: 20px;
+    top: 50%;
+    z-index: 10000000000;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-direction: column;
+    a {
+      margin-bottom: 15px;
+      background-color: red;
+      border: 3px solid white;
+      width: 23px;
+      height: 23px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      position: relative;
+      &:hover {
+        background-color: transparent;
+        &::after {
+          display: block;
+        }
+      }
+      &::after {
+        content: attr(data-page);
+        position: absolute;
+        left: -110px;
+        top: -8px;
+        font-size: 20px;
+        color: white;
+        display: none;
+        background-color: red;
+        padding: 2px 10px;
+      }
+      &:nth-child(4) {
+        &::after {
+          left: -135px;
+        }
+      }
+    }
+    @include breakpoint(smallphone) {
+      a {
+        width: 20px;
+        height: 20px;
+        &::after {
+          font-size: 16px;
+          left: -90px;
+        }
+        &:nth-child(4) {
+          &::after {
+            left: -110px;
+          }
+        }
+      }
+    }
+  }
+  /////////////////// start landing/////////////////
+  .landing {
+    height: fit-content;
+    video {
+      width: 100%;
+    }
+  }
+  ////////////////// start players/////////////////
+
+  .players {
+    background: url("../../assets/stad.jpg") no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: black;
+      opacity: 90%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    h1 {
+      text-align: right;
+      color: white;
+      position: relative;
+      z-index: 3;
+      margin-right: 30px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .container {
+      flex-direction: column-reverse;
+      display: flex;
+      .row {
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .player {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          margin-bottom: 10px;
+          text-decoration: none;
+          div {
+            position: relative;
+            &::before {
+              content: attr(data-number);
+              position: absolute;
+              font-size: 75px;
+              left: -40px;
+              top: -30px;
+              visibility: hidden;
+            }
+            img {
+              width: 110px;
+              filter: grayscale(100%);
+              -webkit-filter: grayscale(100%);
+              transition: 0.4s all;
+              -webkit-transition: 0.4s all;
+              -moz-transition: 0.4s all;
+              -ms-transition: 0.4s all;
+              -o-transition: 0.4s all;
+              position: relative;
+            }
+          }
+          &:hover img {
+            filter: none;
+            -webkit-filter: none;
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+          }
+          .text {
+            margin-top: 20px;
+            width: 100%;
+            visibility: hidden;
+            z-index: 100;
+            text-align: center;
+            transition: 0.2s all;
+            -webkit-transition: 0.2s all;
+            -moz-transition: 0.2s all;
+            -ms-transition: 0.2s all;
+            -o-transition: 0.2s all;
+            h3 {
+              font-size: 32px;
+            }
+            p {
+              font-size: 22px;
+            }
+            a {
+              text-decoration: none;
+              color: white !important;
+              background-color: #8b0101;
+              font-size: 20px;
+              font-weight: bold;
+              padding: 5px 10px;
+              border-radius: 15px;
+              -webkit-border-radius: 15px;
+              -moz-border-radius: 15px;
+              -ms-border-radius: 15px;
+              -o-border-radius: 15px;
+            }
+          }
+          &:hover .text,
+          &:hover div::before {
+            visibility: visible;
+          }
+          @include breakpoint(smallphone) {
+            div {
+              img {
+                width: 55px;
+              }
+              &::before {
+                font-size: 30px;
+                left: -22px;
+                top: -7px;
+              }
+            }
+            .text {
+              h3 {
+                font-size: 13px;
+              }
+              p {
+                font-size: 10px;
+              }
+            }
+          }
+          @include breakpoint(mediumSc) {
+            div {
+              img {
+                width: 90px;
+              }
+              &::before {
+                font-size: 60px;
+              }
+            }
+            .text {
+              h3 {
+                font-size: 18px;
+              }
+              p {
+                font-size: 14px;
+              }
+            }
+          }
+        }
+        .player.col-12 {
+          .text {
+            &::before {
+              left: 40%;
+            }
+          }
+        }
+      }
+    }
+    @include breakpoint(smallphone) {
+      h1 {
+        font-size: 25px;
+      }
+    }
+  }
+}

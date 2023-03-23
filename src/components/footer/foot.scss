@@ -1,0 +1,122 @@
+@use "../../sass/MediaQuiry" as *;
+
+.footer {
+  position: relative;
+
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background: url("../../assets/playersbk.jpeg") no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+  }
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    background-color: black;
+    opacity: 70%;
+  }
+  .container {
+    position: relative;
+    z-index: 1;
+    .row {
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+      div {
+        img {
+          width: 100px;
+        }
+        display: flex;
+        justify-content: center;
+        &.links {
+          margin-top: 30px;
+          gap: 10px;
+          svg {
+            color: white;
+            font-size: 35px;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            &:hover {
+              color: red;
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyRight {
+    border-top: 2px solid white;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    div {
+      display: flex;
+      color: white;
+      flex-direction: row;
+      padding: 10px;
+      align-items: center;
+      gap: 5px;
+      p {
+        font-size: 20px;
+      }
+      svg {
+        font-size: 20px;
+      }
+    }
+  }
+  @include breakpoint(smallphone) {
+    .row {
+      div {
+        img {
+          width: 50px !important;
+        }
+        &.links svg {
+          font-size: 25px !important;
+        }
+      }
+    }
+    .copyRight {
+      div p,
+      div svg {
+        font-size: 12px;
+      }
+    }
+  }
+  @include breakpoint(mediumSc) {
+    .row {
+      div {
+        img {
+          width: 80px !important;
+        }
+        &.links svg {
+          font-size: 25px !important;
+        }
+      }
+    }
+    .copyRight {
+      div p,
+      div svg {
+        font-size: 16px;
+      }
+    }
+  }
+}

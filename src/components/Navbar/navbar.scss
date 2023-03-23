@@ -1,0 +1,105 @@
+@use "../../sass/MediaQuiry" as *;
+
+.nav {
+  background-color: black;
+  padding: 10px 0px;
+  &.active {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+  }
+  .row {
+    align-items: center;
+    display: flex;
+    justify-content: end;
+    .logo img {
+      width: 45px;
+      float: right;
+    }
+    .icon {
+      display: none;
+      font-size: 30px;
+      color: red;
+    }
+    .collapse {
+      &.active {
+        display: flex;
+      }
+      display: flex;
+      ul {
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        li {
+          list-style: none;
+          position: relative;
+          &::after {
+            transition: 0.3s all;
+            -webkit-transition: 0.3s all;
+            -moz-transition: 0.3s all;
+            -ms-transition: 0.3s all;
+            -o-transition: 0.3s all;
+            content: "";
+            width: 0%;
+            height: 2px;
+            background-color: red;
+          }
+          &:hover::after {
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+          }
+          a {
+            font-size: 19px;
+            text-decoration: none;
+            list-style: none;
+            font-weight: bold;
+            color: white;
+            &:hover {
+              color: white !important;
+            }
+          }
+        }
+      }
+    }
+    @include breakpoint(smallphone) {
+      .collapse {
+        display: none;
+        ul {
+          flex-direction: column;
+          padding: 10px 0px;
+          li a {
+            font-size: 16px;
+          }
+        }
+      }
+      .icon {
+        display: flex;
+        justify-content: left;
+      }
+    }
+    @include breakpoint(mediumSc) {
+      .collapse {
+        display: none;
+        ul {
+          flex-direction: column;
+          padding: 10px 0px;
+        }
+      }
+      .icon {
+        display: flex;
+        justify-content: left;
+      }
+    }
+    @include breakpoint(largeSc) {
+      flex-direction: row-reverse;
+    }
+    @include breakpoint(XlargeSc) {
+      flex-direction: row-reverse;
+    }
+  }
+}

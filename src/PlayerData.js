@@ -1,0 +1,146 @@
+import img1 from "./assets/ali_maloo.jpeg";
+import img2 from "./assets/amr_elsolia.jpeg";
+import img3 from "./assets/hamdy_fathy.jpeg";
+import img4 from "./assets/hassan_elshahat.jpeg";
+import img5 from "./assets/magdy_afsha.jpeg";
+import img6 from "./assets/mahmoud_3bd_elmn3m.jpeg";
+import img7 from "./assets/mohamed_hany.jpeg";
+import img8 from "./assets/ramy_rabia.jpeg";
+import img9 from "./assets/shnawy.jpeg";
+import img10 from "./assets/yasser_ibrahim.jpeg";
+import img11 from "./assets/dieng.jpeg";
+import img12 from "./assets/mahmoud_metwaly (1).jpeg";
+
+const PLAYERSDATA = [
+  {
+    number: "21",
+    url: "alimalol",
+    name: "علي معلول",
+    image: img1,
+    postion: "مدافع",
+    country: " صفاقس-تونس",
+    born: "1990-01-01",
+    weight: "72",
+    height: "175",
+  },
+  {
+    url: "amrelsolia",
+    number: "17",
+    name: "عمرو السولية",
+    image: img2,
+    postion: "خط وسط",
+    country: "الدقهلية",
+    born: "1989-04-02",
+    weight: "70",
+    height: "185",
+  },
+  {
+    url: "hamdyfathy",
+    number: "8",
+    name: "حمدي فتحي",
+    image: img3,
+    postion: "خط وسط",
+    country: "البحيرة",
+    born: "1994-01-01",
+    height: "180",
+  },
+  {
+    url: "hassenelshahat",
+    number: "14",
+    name: "حسين الشحات ",
+    image: img4,
+    postion: " مهاجم",
+    country: "كفر الشيخ",
+    born: "1992-06-21",
+    weight: "68",
+    height: "171",
+  },
+  {
+    url: "mohamedmagdy",
+    number: "19",
+    name: " (افشة) محمد مجدي",
+    image: img5,
+    postion: "خط وسط",
+    country: "الجيزة",
+    born: "1992-03-05",
+    height: "168",
+  },
+  {
+    url: "mahmoudabdelmnam",
+    number: "7",
+    name: "(كهربا) محمود عبد المنعم",
+    image: img6,
+    postion: "مهاجم",
+    country: "القاهرة",
+    born: "1994-04-12",
+    weight: "75",
+    height: "186",
+  },
+  {
+    url: "mohamedhany",
+    number: "30",
+    name: "محمد هاني ",
+    image: img7,
+    postion: " مدافع",
+    country: "القاهرة",
+    born: "1992-01-25",
+    weight: "",
+    height: "180",
+  },
+  {
+    url: "ramyrabea",
+    number: "5",
+    name: "رامي رابيعة",
+    image: img8,
+    postion: " مدافع",
+    country: "الدقهلية",
+    born: "1993-05-20",
+    weight: "86",
+    height: "183",
+  },
+  {
+    url: "mohamedelshenawy",
+    number: "1",
+    name: "محمد الشناوي ",
+    image: img9,
+    postion: " حارس مرمي",
+    country: "كفر الشيخ",
+    born: "1988-12-18",
+    weight: "86",
+    height: "191",
+  },
+  {
+    url: "yasseribrahim",
+    number: "6",
+    name: " ياسر ابراهيم ",
+    image: img10,
+    postion: " مدافع",
+    country: "الدقهلية",
+    born: "1992-02-10",
+    weight: "",
+    height: "185",
+  },
+  {
+    url: "aleodiang",
+    number: "15",
+    name: " أليو ديانج  ",
+    image: img11,
+    postion: " خط وسط",
+    country: "بامكو-مالي",
+    born: "1997-10-16",
+    weight: "",
+    height: "186",
+  },
+  {
+    url: "mohamedmetoly",
+    number: "4",
+    name: " محمود متولي   ",
+    image: img12,
+    postion: "مدافع ",
+    country: "الدقهلية",
+    born: "1993-10-04",
+    weight: "",
+    height: "177",
+  },
+];
+export default PLAYERSDATA;
