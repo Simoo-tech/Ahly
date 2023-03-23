@@ -29,7 +29,7 @@ function App() {
         <Top />
         <NavBar />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" exact element={<Home />} />
           <Route path="/player">
             <Route path="/:url" element={<Player />} />
           </Route>
